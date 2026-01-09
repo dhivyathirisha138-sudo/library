@@ -41,6 +41,14 @@ class Library:
         else:
             print("Book not found!")
 
+    def search_book(self, book_id):
+        if book_id in self.books:
+            details = self.books[book_id]
+            status = "Issued" if details["issued"] else "Available"
+            print(f"Book Found → ID: {book_id}, Name: {details['name']}, Status: {status}")
+        else:
+            print("Book not found!")
+
 
 def main():
     library = Library()
@@ -51,7 +59,8 @@ def main():
         print("2. Display Books")
         print("3. Issue Book")
         print("4. Return Book")
-        print("5. Exit")
+        print("5. Search Book")
+        print("6. Exit")
 
         choice = input("Enter your choice: ")
 
@@ -72,6 +81,11 @@ def main():
             library.return_book(book_id)
 
         elif choice == "5":
+            book_id=input("Enter book ID to search: ")
+            library.search_book(book_id)
+
+        
+        elif choice == "6":
             print("Thank you! Exiting Library System.")
             break
 
