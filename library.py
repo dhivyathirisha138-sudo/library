@@ -32,3 +32,12 @@ def register_student(student_name):
     """Register a new student"""
     students.append(student_name)
     print(f"Student '{student_name}' registered successfully.")
+
+# Login Feature
+
+def login(username, password):
+    if username == "admin" and password == "admin123":
+        print("Login successful")
+    else:
+        print("Invalid username or password")
+
