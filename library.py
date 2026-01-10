@@ -23,6 +23,15 @@ def display_books():
         print("Available books:")
         for book in books:
             print
+def display_books():
+    """Display all books in the library"""
+    if not books:
+        print("No books in library (Main branch)")
+    else:
+        print("Available books (Main branch):")
+        for book in books:
+            print("-", book)
+
 
 # Student Registration Module
 
