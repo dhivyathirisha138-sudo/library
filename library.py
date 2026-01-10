@@ -23,3 +23,12 @@ def display_books():
         print("Available books:")
         for book in books:
             print
+
+# Student Registration Module
+
+students = []
+
+def register_student(student_name):
+    """Register a new student"""
+    students.append(student_name)
+    print(f"Student '{student_name}' registered successfully.")
