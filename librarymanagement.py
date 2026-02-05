@@ -9,11 +9,11 @@ class Library:
             print("Book ID already exists!")
         else:
             self.books[book_id] = {"name": book_name, "issued": False}
-            print("Book added successfully!")
+            print("Book added successfull")
 
     def display_books(self):
         if not self.books:
-            print("No books available in library.")
+            print("No books available in the library.")
         else:
             print("\nAvailable Books:")
             print("ID\tBook Name\tStatus")
@@ -25,7 +25,7 @@ class Library:
         if book_id in self.books:
             if not self.books[book_id]["issued"]:
                 self.books[book_id]["issued"] = True
-                print("Book issued successfully!")
+                print("Books are issued successfully!")
             else:
                 print("Book is already issued.")
         else:
